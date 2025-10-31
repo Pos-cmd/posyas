@@ -1,0 +1,20 @@
+# Build artifacts
+.nuxt
+.output
+node_modules
+.pnpm-store
+
+# VCS
+.git
+.gitignore
+
+# Tooling and editor
+.vscode
+.husky
+
+# Environment files
+.env
+.env.*
+
+# Logs
+*.log
