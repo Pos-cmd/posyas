@@ -14,7 +14,8 @@
     "prettier:fix": "prettier --write .",
     "----------ESLINT-------------": "exit 0",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "eslint . --fix",
+    "prepare": "husky"
   },
   "dependencies": {
     "@nuxt/eslint": "1.10.0",
@@ -25,6 +26,10 @@
     "vue-router": "^4.6.3"
   },
   "devDependencies": {
+    "@commitlint/cli": "^20.1.0",
+    "@commitlint/config-conventional": "^20.0.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.6",
     "prettier": "3.6.2"
   },
   "pnpm": {
@@ -32,6 +37,15 @@
       "@parcel/watcher",
       "esbuild",
       "unrs-resolver"
+    ]
+  },
+  "lint-staged": {
+    "*.{js,ts,vue}": [
+      "prettier --write",
+      "eslint --fix"
+    ],
+    "*.{json,md,,yml,yaml}": [
+      "prettier --write"
     ]
   }
 }
