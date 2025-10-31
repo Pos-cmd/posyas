@@ -4,3 +4,7 @@
     <NuxtWelcome />
   </div>
 </template>
+
+<script setup>
+  // console.log('App component loaded')
+</script>
